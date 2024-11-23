@@ -45,9 +45,8 @@ jobs:
         with:
           projectBaseDir: java
           args: >
-            -Dsonar.organization=my-organization
-            -Dsonar.projectKey=my-projectkey
-            -Dsonar.java.binaries=target/classes
+            -Dsonar.projectKey=blgianini_treinamento-github-avanade
+            -Dsonar.organization=blgianini
             -Dsonar.jacoco.reportPaths=target/site/jacoco/jacoco.xml
 
 
