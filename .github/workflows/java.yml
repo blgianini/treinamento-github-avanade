@@ -47,8 +47,8 @@ jobs:
           args: >
             -Dsonar.organization=my-organization
             -Dsonar.projectKey=my-projectkey
-            -Dsonar.java.binaries=target/classes
-            -Dsonar.jacoco.reportPaths=target/site/jacoco/jacoco.xml
+            -Dsonar.java.binaries=java/target/classes
+            -Dsonar.jacoco.reportPaths=java/target/site/jacoco/jacoco.xml
 
 
 
