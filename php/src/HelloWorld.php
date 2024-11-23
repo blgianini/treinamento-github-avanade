@@ -3,7 +3,6 @@
 namespace HelloWorld;
 
 class HelloWorld
-
 {
     public function main(): string
     {
