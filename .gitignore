@@ -1,0 +1,10 @@
+nodejs/node_modules
+php/vendor
+
+aspnet/HelloWorldApi/bin/
+aspnet/HelloWorldApi/obj/
+
+aspnet/HelloWorldAspNetCore.Tests/bin/
+aspnet/HelloWorldAspNetCore.Tests/obj/
+
+java/target/
