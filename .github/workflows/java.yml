@@ -43,9 +43,12 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
+          projectBaseDir: java
           args: >
             -Dsonar.organization=my-organization
             -Dsonar.projectKey=my-projectkey
+            -Dsonar.java.binaries=target/classes
+            -Dsonar.jacoco.reportPaths=target/site/jacoco/jacoco.xml
 
 
 
