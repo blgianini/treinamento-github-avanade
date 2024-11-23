@@ -25,6 +25,8 @@ jobs:
         run: |
           cd java
           mvn clean verify
+          cd target
+          ls
       
       - name: Cahce Maven packages
         uses: actions/cache@v4
