@@ -23,11 +23,13 @@ jobs:
       - name: Restore dependencies
         run: |
           cd aspnet
+          cd .\HelloWorldApi\
           dotnet restore
 
       - name: Run unit tests
         run: |
           cd aspnet
+          cd .\HelloWorldAspNetCore.Tests\
           dotnet test
 
   build:
