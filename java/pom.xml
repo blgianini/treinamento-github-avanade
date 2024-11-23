@@ -15,6 +15,7 @@
     <maven.compiler.release>17</maven.compiler.release>
     <sonar.organization>blgianini</sonar.organization>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     <sonar.coverage.jacoco.xmlReportPaths>./target/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
   </properties>
   
@@ -46,6 +47,12 @@
 
   <build>
     <plugins>
+      <plugin>
+        <groupId>org.sonarsource.scanner.maven</groupId>
+        <artifactId>sonar-maven-plugin</artifactId>
+        <version>3.7.0.1746</version>
+      </plugin>
+
       <!-- maven-compiler-plugin to use Java 17 -->
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
