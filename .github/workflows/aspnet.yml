@@ -1,0 +1,38 @@
+name: ASP.NET CI
+
+on:
+  push:
+    paths:
+      - 'aspnet/**'
+  pull_request:
+    paths:
+      - 'aspnet/**'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '9.0'
+
+      - name: Restore dependencies
+        run: |
+          cd aspnet
+          cd HelloWorldApi
+          dotnet restore
+
+      - name: Run unit tests
+        run: |
+          cd aspnet
+          cd HelloWorldAspNetCore.Tests
+          dotnet test
+
+  build:
+    uses: ./.github/workflows/reusable-workflow.yml
+    with:
+      language: 'aspnet'
