@@ -41,9 +41,10 @@ jobs:
         run: |
           cd java
           mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
-              -Dsonar.projectKey=blgianini_treinamento-github-avanade \
-              -Dsonar.login=${{ secrets.SONAR_TOKEN }} \
-              -Dsonar.junit.reportPaths=target/jacoco.exec
+            -Dsonar.projectKey=blgianini_treinamento-github-avanade \
+            -Dsonar.organization=your-organization \
+            -Dsonar.host.url=https://sonarcloud.io \
+            -Dsonar.jacoco.reportPaths=target/jacoco.exec
 
 
 
