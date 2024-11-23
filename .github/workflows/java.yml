@@ -42,7 +42,7 @@ jobs:
           cd java
           mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
             -Dsonar.projectKey=blgianini_treinamento-github-avanade \
-            -Dsonar.organization=your-organization \
+            -Dsonar.organization=blgianini \
             -Dsonar.host.url=https://sonarcloud.io \
             -Dsonar.jacoco.reportPaths=target/jacoco.exec
 
