@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies and build Node.js project
         if: ${{ inputs.language == 'node' }}
         run: |
-          cd node
+          cd nodejs
           npm install
           npm run build
 

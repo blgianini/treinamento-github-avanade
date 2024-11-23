@@ -27,7 +27,7 @@ jobs:
 
       - name: Run unit tests
         run: |
-          cd node
+          cd nodejs
           npm test
 
   build:
