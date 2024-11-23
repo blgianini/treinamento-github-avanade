@@ -42,7 +42,7 @@ jobs:
 
         run: |
           cd java
-          mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
+          mvn sonar:sonar \
             -Dsonar.projectKey=blgianini_treinamento-github-avanade \
             -Dsonar.organization=blgianini \
             -Dsonar.host.url=https://sonarcloud.io \
