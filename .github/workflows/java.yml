@@ -43,7 +43,6 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
-          projectBaseDir: java
           args: >
             -Dsonar.organization=my-organization
             -Dsonar.projectKey=my-projectkey
