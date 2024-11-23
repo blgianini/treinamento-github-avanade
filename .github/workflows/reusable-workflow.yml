@@ -20,12 +20,11 @@ jobs:
         with:
           node-version: '23'
 
-      - name: Install dependencies and build Node.js project
+      - name: Install dependencies Node.js project
         if: ${{ inputs.language == 'node' }}
         run: |
           cd nodejs
           npm install
-          npm run build
 
       - name: Set up PHP
         if: ${{ inputs.language == 'php' }}
