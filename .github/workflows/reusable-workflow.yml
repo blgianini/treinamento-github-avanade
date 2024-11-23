@@ -50,7 +50,7 @@ jobs:
         if: ${{ inputs.language == 'java' }}
         run: |
           cd java
-          ./mvnw clean package
+          mvn clean package
 
       - name: Set up .NET
         if: ${{ inputs.language == 'aspnet' }}

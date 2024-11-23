@@ -24,7 +24,7 @@ jobs:
       - name: Build and run unit tests
         run: |
           cd java
-          ./mvnw test
+          mvn test
 
   build:
     uses: ./.github/workflows/reusable-workflow.yml
