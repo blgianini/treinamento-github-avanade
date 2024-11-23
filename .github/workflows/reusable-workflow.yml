@@ -62,7 +62,7 @@ jobs:
         if: ${{ inputs.language == 'aspnet' }}
         run: |
           cd aspnet
-          cd .\HelloWorldApi\
+          cd HelloWorldApi
           dotnet restore
           dotnet build
 
