@@ -42,6 +42,8 @@ jobs:
 
         run: |
           cd java
+          cd target
+          ls
           mvn sonar:sonar \
             -Dsonar.projectKey=blgianini_treinamento-github-avanade \
             -Dsonar.organization=blgianini \
