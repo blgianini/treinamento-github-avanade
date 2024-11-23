@@ -24,7 +24,7 @@ jobs:
       - name: Build and run unit tests
         run: |
           cd java
-          mvn test
+          mvn clean verify
       
       - name: Cahce Maven packages
         uses: actions/cache@v4
