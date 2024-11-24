@@ -30,13 +30,21 @@ jobs:
           cd nodejs
           npm test
 
-      - name: Run SonarCloud analysis
-        uses: SonarSource/sonarcloud-github-action@v1
+  sonar:
+    needs: test
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
         with:
-          organization: 'blgianini'
-          projectKey: 'blgianini_treinamento-github-avanade'
+          fetch-depth: 
+      - name: SonarQube Cloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+
 
   build:
     uses: ./.github/workflows/reusable-workflow.yml
