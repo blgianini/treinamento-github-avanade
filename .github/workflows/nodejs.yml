@@ -30,6 +30,14 @@ jobs:
           cd nodejs
           npm test
 
+      - name: Run SonarCloud analysis
+        uses: SonarSource/sonarcloud-github-action@v1
+        with:
+          organization: 'blgianini'
+          projectKey: 'blgianini_treinamento-github-avanade'
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
   build:
     uses: ./.github/workflows/reusable-workflow.yml
     with:
