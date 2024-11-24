@@ -24,32 +24,7 @@ jobs:
       - name: Build and run unit tests
         run: |
           cd java
-          mvn clean verify
-          cd target
-          ls
-      
-      - name: Cahce Maven packages
-        uses: actions/cache@v4
-        with:
-          path: ~/.m2
-          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-          restore-keys: ${{ runner.os }}-m2
-
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: SonarCloud Scan
-        uses: sonarsource/sonarcloud-github-action@v3
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        with:
-          projectBaseDir: java
-          args: >
-            -Dsonar.projectKey=blgianini_treinamento-github-avanade
-            -Dsonar.organization=blgianini
-            -Dsonar.jacoco.reportPaths=target/site/jacoco/jacoco.xml
-
-
+          mvn test
 
   build:
     uses: ./.github/workflows/reusable-workflow.yml
